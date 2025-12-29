@@ -15,6 +15,7 @@ January 2023, performs trend analysis and forecasting, and provides interactive
 visualizations and matrix-based analytics.
 
 It is built to ensure:
+
 - Deterministic calculations
 - Clear separation of concerns
 - Full test coverage for computational logic
@@ -25,6 +26,7 @@ It is built to ensure:
 ## Tech Stack
 
 ### Backend
+
 - Python 3.11+
 - FastAPI
 - Pydantic
@@ -32,11 +34,13 @@ It is built to ensure:
 - Pure Python computational modules
 
 ### Frontend
+
 - React or Angular
 - REST-based API communication
 - Charting and table visualization libraries
 
 ### Infrastructure
+
 - Docker
 - Docker Compose
 
@@ -45,11 +49,13 @@ It is built to ensure:
 ## Core Capabilities
 
 ### Data Management
+
 - Persistent storage of monthly average USD exchange rates
 - Data model includes month and calculated average
 - Designed for periodic monthly updates
 
 ### Visualization
+
 - Line graph displaying monthly average exchange rates
 - Tabular view with color-based rating:
   - Green → highest average value
@@ -60,6 +66,7 @@ It is built to ensure:
 - Search and highlighting of specific months
 
 ### Forecasting
+
 - Approximate forecast for the next month
 - Forecast is based on the rolling average of the previous three months
 
@@ -70,15 +77,19 @@ It is built to ensure:
 The system performs additional analytical operations using matrix-based models:
 
 ### Forecast Matrix
+
 - Each cell represents a rolling three-month average
 
 ### Difference Matrix
+
 - Difference between actual monthly averages and forecasted values
 
 ### Aggregated Analysis
+
 - Additional row calculating the average difference for each three-month window
 
 ### Matrix Multiplication
+
 - Multiplication of the forecast matrix by the difference matrix
 - Results displayed in a structured tabular format
 - Interactive display triggered by user action
@@ -115,6 +126,7 @@ The backend follows a layered architecture:
   Domain-specific exceptions
 
 This structure ensures:
+
 - Testability
 - Maintainability
 - Clear responsibility boundaries

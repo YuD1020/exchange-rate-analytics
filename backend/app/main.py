@@ -1,10 +1,5 @@
 from fastapi import FastAPI
-from app.config.settings import load_settings
-
-settings = load_settings()
+from app.api.routes import router
 
 app = FastAPI()
-
-@app.get("/health")
-def health():
-    return {"status": "ok", "env": settings["env"]}
+app.include_router(router)

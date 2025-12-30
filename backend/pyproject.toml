@@ -2,12 +2,18 @@
 name = "exchange-rate-analytics"
 version = "0.1.0"
 dependencies = [
-  "fastapi",
-  "uvicorn"
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "sqlalchemy>=2.0",
+    "requests"
 ]
 
 [project.optional-dependencies]
 dev = [
-  "pytest",
-  "pytest-cov"
+    "pytest",
+    "pytest-cov"
 ]
+
+[tool.setuptools]
+packages = ["app"]

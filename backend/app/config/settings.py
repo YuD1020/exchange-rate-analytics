@@ -18,5 +18,6 @@ def load_settings():
     return {
         "env": env,
         "api_key": require_env("API_KEY"),
+        "database_url": require_env("DATABASE_URL"),
         "log_level": os.getenv("LOG_LEVEL", "INFO"),
     }
